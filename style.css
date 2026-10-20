@@ -1,8 +1,40 @@
 
-/* Day 1: Portfolio project foundation */
+/* Day 2: Basic portfolio structure */
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
+    line-height: 1.6;
+}
+
+header,
+main,
+footer {
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
     padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+section {
+    padding: 30px 0;
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
 }
