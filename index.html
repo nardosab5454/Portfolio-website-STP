@@ -4,30 +4,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="My personal developer portfolio website.">
+
+    <meta
+        name="description"
+        content="Welcome to my personal developer portfolio."
+    >
+
     <title>My Portfolio | Home</title>
+
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
 
+    <!-- Navigation -->
     <header>
-        <h1>Welcome to My Portfolio</h1>
-        <p>My journey as a web developer starts here.</p>
+        <nav aria-label="Main navigation">
+            <a href="#home">MyPortfolio</a>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <section id="introduction">
-            <h2>Hello, World!</h2>
+        <!-- Home Section -->
+        <section id="home">
+            <p>Hello, I'm</p>
+            <h1>Your Name</h1>
+            <h2>Aspiring Web Developer</h2>
+
             <p>
-                This is my personal portfolio website.
-                I am building it as part of a 40-day web development challenge.
+                Welcome to my portfolio. I am learning to build
+                websites and turning my ideas into reality.
             </p>
+
+            <a href="#projects">Explore My Projects</a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+
+            <p>
+                I am a passionate learner interested in web development
+                and technology. This website documents my journey,
+                skills, and projects.
+            </p>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>My Projects</h2>
+
+            <article>
+                <h3>Portfolio Website</h3>
+                <p>
+                    A personal website built with HTML, CSS,
+                    and JavaScript as part of my 40-day challenge.
+                </p>
+            </article>
+
+            <article>
+                <h3>Telegram Bot</h3>
+                <p>
+                    A Telegram bot project that demonstrates
+                    my experience experimenting with programming.
+                </p>
+            </article>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+
+            <p>
+                Interested in my work? Feel free to reach out.
+            </p>
+
+            <a href="mailto:your-email@example.com">
+                Send Me an Email
+            </a>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 My Portfolio. All rights reserved.</p>
+        <p>&copy; 2026 Your Name. All rights reserved.</p>
     </footer>
 
 </body>
