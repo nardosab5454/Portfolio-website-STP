@@ -1,40 +1,88 @@
 
-/* Day 2: Basic portfolio structure */
+/* Day 3: Professional navigation bar */
+
+/* Reset default browser spacing */
+* {
+    box-sizing: border-box;
+}
 
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
+    color: #1e293b;
 }
 
-header,
-main,
-footer {
-    padding: 20px;
+/* Navigation container */
+header {
+    background-color: #101827;
+    padding: 18px 8%;
 }
 
+/* Arrange logo and menu in one row */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+/* Portfolio brand */
+nav > a {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* Navigation menu */
 nav ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 28px;
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-nav li {
-    display: inline-block;
-    margin-right: 15px;
+/* Navigation links */
+nav ul a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease;
 }
 
-section {
-    padding: 30px 0;
+/* Hover effect */
+nav ul a:hover {
+    color: #38bdf8;
 }
 
-article {
-    margin-bottom: 20px;
+/* Keyboard accessibility */
+nav a:focus-visible {
+    outline: 2px solid #38bdf8;
+    outline-offset: 5px;
 }
 
-footer {
-    text-align: center;
+/* Responsive navigation */
+@media (max-width: 600px) {
+    header {
+        padding: 18px 5%;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    nav ul {
+        gap: 16px;
+    }
 }
