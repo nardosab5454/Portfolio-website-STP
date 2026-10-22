@@ -86,3 +86,6 @@ nav a:focus-visible {
         gap: 16px;
     }
 }
+nav > a span {
+    color: #38bdf8;
+}
