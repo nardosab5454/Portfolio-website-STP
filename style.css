@@ -1,4 +1,26 @@
 
+/* Day 5: Portfolio design system */
+
+:root {
+    --color-primary: #0284c7;
+    --color-primary-dark: #0369a1;
+    --color-heading: #101827;
+    --color-text: #475569;
+    --color-background: #f8fafc;
+    --color-white: #ffffff;
+    --color-border: #e2e8f0;
+
+    --font-main: Arial, sans-serif;
+
+    --container-width: 1100px;
+    --section-spacing: 80px;
+    --content-spacing: 24px;
+
+    --radius-small: 8px;
+    --radius-large: 16px;
+}
+
+
 /* Day 3: Professional navigation bar */
 
 /* Reset default browser spacing */
@@ -10,12 +32,42 @@ html {
     scroll-behavior: smooth;
 }
 
+
+/* Global design settings */
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #1e293b;
+    font-family: var(--font-main);
+    line-height: 1.7;
+    color: var(--color-text);
+    background-color: var(--color-white);
 }
+
+h1,
+h2,
+h3 {
+    color: var(--color-heading);
+    line-height: 1.25;
+}
+
+h2 {
+    font-size: clamp(28px, 4vw, 38px);
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+p {
+    margin-top: 0;
+}
+
+a {
+    transition: color 0.3s ease;
+}
+
+section {
+    scroll-margin-top: 24px;
+}
+
 
 /* Navigation container */
 header {
@@ -189,3 +241,78 @@ nav > a span {
         align-items: flex-start;
     }
 }
+
+/* Day 5: Consistent section styling */
+
+#about,
+#projects,
+#contact {
+    padding: var(--section-spacing) 8%;
+}
+
+#about {
+    background-color: var(--color-white);
+}
+
+#projects {
+    background-color: var(--color-background);
+}
+
+#contact {
+    background-color: var(--color-white);
+}
+
+/* Project cards */
+#projects article {
+    padding: 24px;
+    margin-bottom: 20px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-large);
+}
+
+#projects article h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+#projects article p {
+    margin-bottom: 0;
+}
+
+/* Contact link */
+#contact a {
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+#contact a:hover {
+    color: var(--color-primary-dark);
+}
+
+/* Footer */
+footer {
+    padding: 24px 8%;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive section spacing */
+@media (max-width: 600px) {
+    #about,
+    #projects,
+    #contact {
+        padding: 56px 5%;
+    }
+
+    #projects article {
+        padding: 18px;
+    }
+}
+
