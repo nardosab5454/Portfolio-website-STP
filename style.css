@@ -70,12 +70,17 @@ section {
 
 
 /* Navigation container */
+
+/* Day 6: Refined navigation */
+
 header {
-    background-color: #101827;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--color-heading);
     padding: 18px 8%;
 }
 
-/* Arrange logo and menu in one row */
 nav {
     display: flex;
     justify-content: space-between;
@@ -83,16 +88,18 @@ nav {
     gap: 24px;
 }
 
-/* Portfolio brand */
 nav > a {
-    color: #ffffff;
+    color: var(--color-white);
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 700;
     text-decoration: none;
     white-space: nowrap;
 }
 
-/* Navigation menu */
+nav > a span {
+    color: var(--color-primary);
+}
+
 nav ul {
     display: flex;
     align-items: center;
@@ -103,44 +110,42 @@ nav ul {
     margin: 0;
 }
 
-/* Navigation links */
 nav ul a {
+    display: inline-block;
+    padding: 6px 0;
     color: #cbd5e1;
-    text-decoration: none;
     font-size: 15px;
-    transition: color 0.3s ease;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.25s ease;
 }
 
-/* Hover effect */
-nav ul a:hover {
+nav ul a:hover,
+nav ul a:focus-visible {
     color: #38bdf8;
 }
 
-/* Keyboard accessibility */
 nav a:focus-visible {
     outline: 2px solid #38bdf8;
     outline-offset: 5px;
 }
 
-/* Responsive navigation */
 @media (max-width: 600px) {
     header {
-        padding: 18px 5%;
+        padding: 16px 5%;
     }
 
     nav {
         flex-direction: column;
         align-items: flex-start;
-        gap: 16px;
+        gap: 12px;
     }
 
     nav ul {
         gap: 16px;
     }
 }
-nav > a span {
-    color: #38bdf8;
-}
+
 
 /* Day 4: Hero section */
 
@@ -189,41 +194,68 @@ nav > a span {
     gap: 16px;
 }
 
+
+/* Day 6: Refined button system */
+
 .btn {
-    display: inline-block;
-    padding: 13px 24px;
-    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 24px;
+    border: 2px solid transparent;
+    border-radius: var(--radius-small);
+    font: inherit;
+    font-weight: 700;
     text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease,
-                color 0.3s ease,
-                transform 0.3s ease;
+    cursor: pointer;
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .btn-primary {
-    background-color: #0284c7;
-    color: #ffffff;
+    background-color: var(--color-primary);
+    color: var(--color-white);
 }
 
 .btn-primary:hover {
-    background-color: #0369a1;
+    background-color: var(--color-primary-dark);
+    box-shadow: 0 6px 18px rgb(2 132 199 / 20%);
     transform: translateY(-2px);
 }
 
 .btn-secondary {
-    border: 2px solid #0284c7;
-    color: #0284c7;
+    background-color: transparent;
+    border-color: var(--color-primary);
+    color: var(--color-primary);
 }
 
 .btn-secondary:hover {
     background-color: #e0f2fe;
+    border-color: var(--color-primary-dark);
+    color: var(--color-primary-dark);
     transform: translateY(-2px);
 }
 
 .btn:focus-visible {
-    outline: 3px solid #101827;
+    outline: 3px solid var(--color-heading);
     outline-offset: 4px;
 }
+
+.btn:active {
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn {
+        transition: none;
+    }
+}
+
 
 /* Hero section on small screens */
 @media (max-width: 600px) {
