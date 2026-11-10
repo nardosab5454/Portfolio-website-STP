@@ -438,4 +438,72 @@ footer p {
     margin-top: 0;
     margin-bottom: 20px;
 }
+/* Day 10: Skills section */
+
+#skills {
+    padding: var(--section-spacing) 8%;
+    background-color: var(--color-background);
+}
+
+.skills-container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.skills-container h2 {
+    margin-top: 0;
+}
+
+.skills-description {
+    color: var(--color-text);
+    line-height: 1.8;
+    max-width: 600px;
+    margin-bottom: 32px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    padding: 24px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-large);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.skill-card h3 {
+    color: var(--color-heading);
+    margin-top: 0;
+}
+
+.skill-card p {
+    color: var(--color-text);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgb(15 23 42 / 8%);
+}
+@media (max-width: 800px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    #skills {
+        padding: 56px 5%;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
